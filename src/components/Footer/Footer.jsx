@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-content-left">
-          <img src={assets.logo} alt="" />
+          <img src={assets.orangelogo} alt="" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
             inventore necessitatibus recusandae eos est. Natus dolor suscipit,
@@ -32,7 +32,7 @@ const Footer = () => {
           <h2>GET IN TOUCH</h2>
           <ul>
             <li>+1-234-567-890</li>
-            <li>contact@orage.in</li>
+            <li>contact@orange.in</li>
           </ul>
         </div>
       </div>

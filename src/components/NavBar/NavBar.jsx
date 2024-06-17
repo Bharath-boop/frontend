@@ -18,7 +18,7 @@ const NavBar = ({ setShowLogin }) => {
     <div className="navbar">
       <Link to="/">
         {" "}
-        <img src={assets.logo} alt="" className="log" />
+        <img src={assets.orangelogo} alt="" className="log" />
       </Link>
       <ul className="navbar-manu">
         <Link

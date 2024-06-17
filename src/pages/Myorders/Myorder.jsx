@@ -13,7 +13,7 @@ const Myorder = () => {
       {},
       { headers: { token } }
     );
-    setData(res.data.data);
+   setData(res.data.data);
     console.log(res.data.data);
   };
 
