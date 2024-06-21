@@ -14,7 +14,7 @@ const Myorder = () => {
       { headers: { token } }
     );
    setData(res.data.data);
-    console.log(res.data.data);
+    // console.log(res.data.data);
   };
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Myorder = () => {
     <div className="my_orders">
       <h2>My Orders</h2>
       <div className="container">
-        {data.map((e, i) => {
+        {data.toReversed().map((e, i) => {
           return (
             <div key={i} className="my-order-order">
               <img src={assets.parcel_icon} alt="" />
