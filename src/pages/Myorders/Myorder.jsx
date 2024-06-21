@@ -27,7 +27,7 @@ const Myorder = () => {
     <div className="my_orders">
       <h2>My Orders</h2>
       <div className="container">
-        {data.toReversed().map((e, i) => {
+        {data.map((e, i) => {
           return (
             <div key={i} className="my-order-order">
               <img src={assets.parcel_icon} alt="" />
