@@ -12,7 +12,6 @@
 
 .footer-content-left img {
     border-radius: 20px;
-
 }
 
 .footer-content {
@@ -68,5 +67,8 @@
 
     .footer-copyright {
         text-align: center;
+    }
+    .footer-content-left img {
+      max-width: max(200px);
     }
 }
