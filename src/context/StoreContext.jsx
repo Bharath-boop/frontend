@@ -7,6 +7,8 @@ const StoreContextProvider = (props) => {
   const url = "https://backend-kcnl.onrender.com";
   const [token, setToken] = useState("");
   const [food_list, setFoodList] = useState([]);
+  const [load, setLoad] = useState(false);
+
   const addToCart = async (itemId) => {
     if (!cartItems[itemId]) {
       setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
@@ -41,8 +43,13 @@ const StoreContextProvider = (props) => {
   };
 
   const fetchFooList = async () => {
+    setLoad(false);
     const res = await axios.get(url + "/food/list");
-    setFoodList(res.data.data);
+    if (res.data.success) {
+      setLoad(true)
+      // console.log(res);
+      setFoodList(res.data.data);
+    }
   };
 
   const loadCartData = async (token) => {
@@ -62,6 +69,7 @@ const StoreContextProvider = (props) => {
   }, []);
 
   const contextValue = {
+    load,
     food_list,
     cartItems,
     setCartItems,
