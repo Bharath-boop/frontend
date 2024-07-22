@@ -6,24 +6,24 @@ import axios from "axios";
 const FoodItem = ({ id, name, price, description, image }) => {
   const { cartItems, addToCart, removeFromCart, url } =
     useContext(StoreContext);
-    const [load,setLoad]=useState(false)
+    // const [load,setLoad]=useState(false)
 
-    
-    const fetchFooList = async () => {
-      setLoad(false);
-      const res = await axios.get(url + "/food/list");
-      if (res.data.success) {
-        setLoad(true)
-      }
-    };
 
-    useEffect(()=>{
-      fetchFooList()
-    },[])
+    // const fetchFooList = async () => {
+    //   setLoad(false);
+    //   const res = await axios.get(url + "/food/list");
+    //   if (res.data.success) {
+    //     setLoad(true)
+    //   }
+    // };
+
+    // useEffect(()=>{
+    //   fetchFooList()
+    // },[])
 
  
 
-  if (load) {
+  // if (load) {
     return (
       <div className="food-item">
         <div className="food-item-img-container">
@@ -65,13 +65,13 @@ const FoodItem = ({ id, name, price, description, image }) => {
         </div>
       </div>
     );
-  } else {
-    return (
-      <div className="verify">
-      <div className="spinner"></div>
-    </div>
-    );
-  }
+  // } else {
+  //   return (
+  //     <div className="verify">
+  //     <div className="spinner"></div>
+  //   </div>
+  //   );
+  // }
 };
 
 export default FoodItem;
