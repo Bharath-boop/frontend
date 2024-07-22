@@ -22,9 +22,6 @@ const FoodDisplay = ({ category }) => {
               />
             );
           }
-          else{
-
-          }
         })}
       </div>
     </div>
