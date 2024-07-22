@@ -43,6 +43,7 @@ const StoreContextProvider = (props) => {
   };
 
   const fetchFooList = async () => {
+    setLoad(false)
     const res = await axios.get(url + "/food/list");
     if (res.data.success) {
       setLoad(true)
@@ -70,6 +71,7 @@ const StoreContextProvider = (props) => {
 
   const contextValue = {
     load,
+    setLoad,
     food_list,
     cartItems,
     setCartItems,
