@@ -2,12 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import "./FoodItem.css";
 import { assets } from "../../assets/assets";
 import { StoreContext } from "../../context/StoreContext";
-import axios from "axios";
 const FoodItem = ({ id, name, price, description, image, load }) => {
   const { cartItems, addToCart, removeFromCart, url } =
     useContext(StoreContext);
-
-  if (load) {
     return (
       <div className="food-item">
         <div className="food-item-img-container">
@@ -49,13 +46,7 @@ const FoodItem = ({ id, name, price, description, image, load }) => {
         </div>
       </div>
     );
-  } else {
-    return (
-      <div className="verify">
-        <div className="spinner"></div>
-      </div>
-    );
-  }
+  
 };
 
 export default FoodItem;
